@@ -233,14 +233,6 @@ export const skills = [
     projectIds: ["enterprise-netflix-dbt", "dbt-snowflake-analytics", "stock-market-prediction", "zomato-sql-analytics", "national-enrollment-intelligence-neis", "riskpulse-insurance", "aiml-academic-performance", "cs-ds-academic-performance"]
   },
   {
-    id: "agile-scrum",
-    name: "Agile / Scrum",
-    category: "Workflow",
-    level: 93,
-    description: "Scrum Master and leadership experience, sprint planning, backlog grooming, daily standups, sprint reviews, and retrospective facilitation.",
-    projectIds: ["enterprise-netflix-dbt", "aiml-academic-performance"]
-  },
-  {
     id: "stakeholder-communication",
     name: "Stakeholder Communication",
     category: "Workflow",

@@ -22,12 +22,22 @@ export const resumeData = {
     cgpa: "7.5 / 10",
     standing: "In Progress (Senior Year)",
     coursework: [
-      "DBMS",
-      "Machine Learning",
-      "Data Structures",
-      "Statistics for Data Science",
-      "Operating Systems"
-    ]
+  "DBMS",
+  "Machine Learning",
+  "Data Structures",
+  "Statistics for Data Science",
+  "Operating Systems",
+  "Object-Oriented Programming",
+  "Computer Networks",
+  "Computer Organization & Architecture",
+  "Design & Analysis of Algorithms",
+  "Theory of Computation",
+  "Software Engineering",
+  "Computer Programming",
+  "Discrete Mathematics",
+  "Digital Systems",
+  "Compiler Design"
+]
   },
   certifications: [
     { name: "Advanced Excel", issuer: "Accounts Expert Training Services", date: "May 2026" },

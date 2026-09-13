@@ -55,7 +55,7 @@ export default function HomePage() {
                 <span className="text-slate-300">&bull;</span>
                 <span>Analytics Engineer</span>
                 <span className="text-slate-300">&bull;</span>
-                <span>Technology Leader</span>
+                <span>Tech Lead</span>
               </div>
 
               {/* Short Powerful Personal Statement */}
@@ -182,7 +182,7 @@ export default function HomePage() {
                   Technology Leadership
                 </h3>
                 <p className="text-slate-600 text-xs leading-relaxed">
-                  Led a 25-person analytics team at The Entrepreneurship Network (TEN), setting architectural standards and delivering 5 end-to-end BI projects.
+                  Led a 25-person analytics team at The Entrepreneurship Network (TEN), setting architectural standards and delivering 5+ end-to-end projects.
                 </p>
               </div>
             </div>
