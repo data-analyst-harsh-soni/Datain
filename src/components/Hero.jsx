@@ -47,7 +47,7 @@ export default function Hero({ onExploreWork }) {
             className="group px-7 py-3.5 rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 text-white font-semibold text-sm shadow-[0_8px_25px_rgba(37,99,235,0.28)] hover:shadow-[0_12px_32px_rgba(124,58,237,0.35)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-200 flex items-center gap-2"
             data-cursor="EXPLORE"
           >
-            <span>Explore 15 Case Studies</span>
+            <span>Explore 16 Case Studies</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
 

@@ -1,14 +1,15 @@
 import React from 'react';
-import { ExternalLink, Github, ArrowRight, ShieldAlert, FileText, Layers } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, ShieldAlert, FileText, Layers, Trophy, Award, ExternalLink, Github } from 'lucide-react';
 
-export default function ProjectCard({ project, onOpenModal }) {
+export default function ProjectCard({ project }) {
   const previewImage = project.assets?.[0]?.url || null;
 
   return (
-    <div
-      onClick={() => onOpenModal(project)}
-      className="group glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col justify-between cursor-pointer border border-slate-200/90 bg-white shadow-sm hover:shadow-xl hover:border-blue-400 transition-all duration-300"
-      data-cursor="VIEW"
+    <Link
+      to={`/work/${project.id}`}
+      className="group glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col justify-between border border-slate-200/90 bg-white shadow-sm hover:shadow-xl hover:border-blue-400 transition-all duration-300 block focus:outline-none focus:ring-2 focus:ring-blue-500"
+      data-cursor="CASE STUDY"
     >
       {/* Visual Thumbnail */}
       <div className="relative h-52 sm:h-56 bg-slate-100 overflow-hidden border-b border-slate-100">
@@ -20,16 +21,20 @@ export default function ProjectCard({ project, onOpenModal }) {
             loading="lazy"
           />
         ) : (
-          /* Abstract Pipeline Fallback for Architecture Projects */
-          <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-blue-50/80 via-indigo-50/40 to-slate-50 p-6 text-center">
-            <div className="w-12 h-12 rounded-xl bg-white border border-blue-200/80 flex items-center justify-center mb-3 shadow-sm">
-              <Layers className="w-6 h-6 text-blue-600" />
+          /* Abstract Pipeline Fallback */
+          <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-blue-50/90 via-indigo-50/50 to-slate-50 p-6 text-center">
+            <div className="w-12 h-12 rounded-xl bg-white border border-blue-200/90 flex items-center justify-center mb-3 shadow-sm">
+              {project.presentationType === 'competition' ? (
+                <Trophy className="w-6 h-6 text-blue-600" />
+              ) : (
+                <Layers className="w-6 h-6 text-blue-600" />
+              )}
             </div>
             <span className="font-mono text-xs text-blue-700 uppercase tracking-wider font-semibold">
               {project.category}
             </span>
             <span className="text-[11px] text-slate-500 mt-1 font-mono">
-              Data Pipeline &amp; Architecture Case Study
+              {project.type || 'Data Pipeline & Architecture Case Study'}
             </span>
           </div>
         )}
@@ -41,6 +46,12 @@ export default function ProjectCard({ project, onOpenModal }) {
           </span>
 
           <div className="flex items-center gap-1.5">
+            {project.highlight && (
+              <span className="px-2 py-0.5 rounded bg-blue-100/95 border border-blue-300 text-[9px] font-mono font-bold text-blue-900 uppercase flex items-center gap-1 shadow-sm">
+                <Award className="w-3 h-3 text-blue-700" />
+                <span>{project.highlight}</span>
+              </span>
+            )}
             {project.isConfidentialDataset && (
               <span className="px-2 py-0.5 rounded bg-amber-100/95 border border-amber-300 text-[9px] font-mono font-bold text-amber-900 uppercase flex items-center gap-1 shadow-sm">
                 <ShieldAlert className="w-3 h-3 text-amber-700" />
@@ -69,7 +80,7 @@ export default function ProjectCard({ project, onOpenModal }) {
           <h3 className="font-display font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-2 mb-2">
             {project.title}
           </h3>
-          <p className="text-xs text-slate-600 leading-relaxed line-clamp-2 mb-4">
+          <p className="text-xs text-slate-600 leading-relaxed line-clamp-2 mb-4 font-normal">
             {project.shortDescription}
           </p>
         </div>
@@ -92,18 +103,18 @@ export default function ProjectCard({ project, onOpenModal }) {
             )}
           </div>
 
-          <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-            <span className="font-mono text-[11px] text-slate-600 group-hover:text-slate-900 transition-colors">
+          <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+            <span className="font-mono text-[11px] text-slate-500">
               {project.metrics?.[0]?.value || 'Case Study'}
             </span>
 
-            <div className="flex items-center gap-1 font-semibold text-blue-600 group-hover:translate-x-1 transition-transform">
-              <span>Inspect</span>
+            <div className="flex items-center gap-1.5 font-semibold text-blue-600 group-hover:text-blue-700 group-hover:translate-x-1 transition-all">
+              <span>View Case Study</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

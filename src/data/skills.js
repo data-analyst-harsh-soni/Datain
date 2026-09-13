@@ -14,7 +14,7 @@ export const skills = [
     category: "Core Analytics",
     level: 98,
     description: "Enterprise multi-page dashboards, custom DAX measures, star schema modeling, Power Query transformations, dynamic dark/light UI themes, drill-through exploration, and executive scorecards.",
-    projectIds: ["real-estate-intelligence", "hr-workforce-attrition", "riskpulse-insurance", "national-enrollment-intelligence-neis", "enterprise-sales-intelligence", "aadhaar-enrollment-analysis", "aiml-academic-performance", "cs-ds-academic-performance", "propera-real-estate", "motomarket-intelligence", "stock-market-prediction"]
+    projectIds: ["real-estate-intelligence", "hr-workforce-attrition", "riskpulse-insurance", "national-enrollment-intelligence-neis", "enterprise-sales-intelligence", "aadhaar-enrollment-analysis", "aiml-academic-performance", "cs-ds-academic-performance", "propera-real-estate", "motomarket-intelligence", "stock-market-prediction", "databuzz-global-competition"]
   },
   {
     id: "dax",
@@ -22,7 +22,7 @@ export const skills = [
     category: "Core Analytics",
     level: 95,
     description: "Calculated measures, time-intelligence calculations (YTD, MTD, YoY), filter context manipulation (CALCULATE, ALL, FILTER), ranking algorithms, and dynamic KPI variance metrics.",
-    projectIds: ["real-estate-intelligence", "hr-workforce-attrition", "riskpulse-insurance", "national-enrollment-intelligence-neis", "enterprise-sales-intelligence", "aadhaar-enrollment-analysis", "aiml-academic-performance", "cs-ds-academic-performance", "propera-real-estate", "motomarket-intelligence"]
+    projectIds: ["real-estate-intelligence", "hr-workforce-attrition", "riskpulse-insurance", "national-enrollment-intelligence-neis", "enterprise-sales-intelligence", "aadhaar-enrollment-analysis", "aiml-academic-performance", "cs-ds-academic-performance", "propera-real-estate", "motomarket-intelligence", "databuzz-global-competition"]
   },
   {
     id: "powerquery",
@@ -30,7 +30,7 @@ export const skills = [
     category: "Core Analytics",
     level: 94,
     description: "M-code transformations, automated ingestion pipelines, data type enforcement, column normalization, pivot/unpivot, and cross-source merging.",
-    projectIds: ["real-estate-intelligence", "hr-workforce-attrition", "enterprise-sales-intelligence", "aadhaar-enrollment-analysis", "aiml-academic-performance", "cs-ds-academic-performance"]
+    projectIds: ["real-estate-intelligence", "hr-workforce-attrition", "enterprise-sales-intelligence", "aadhaar-enrollment-analysis", "aiml-academic-performance", "cs-ds-academic-performance", "databuzz-global-competition"]
   },
   {
     id: "excel",
@@ -88,7 +88,7 @@ export const skills = [
     category: "Data Engineering",
     level: 95,
     description: "Designing fact and dimension tables, surrogate keys, snowflake extensions, grain specification, and query performance optimization.",
-    projectIds: ["enterprise-netflix-dbt", "enterprise-sales-intelligence", "hr-workforce-attrition", "riskpulse-insurance"]
+    projectIds: ["enterprise-netflix-dbt", "enterprise-sales-intelligence", "hr-workforce-attrition", "riskpulse-insurance", "databuzz-global-competition"]
   },
   {
     id: "postgresql",

@@ -19,7 +19,8 @@ export default function ProjectArchive({ onOpenModal }) {
     'SQL',
     'Python & EDA',
     'Automotive',
-    'Academic & Institutional'
+    'Academic & Institutional',
+    'Competition & Analytics'
   ];
 
   const filteredProjects = useMemo(() => {
