@@ -42,11 +42,11 @@ export default function CustomCursor() {
 
   if (!isVisible) return null;
 
-  let ringClass = 'fixed top-0 left-0 rounded-full border border-blue-600/30 transition-transform duration-100 ease-out flex items-center justify-center ';
+  let ringClass = 'fixed top-0 left-0 rounded-full border border-[#7657E8]/40 dark:border-[#BDA8FF]/50 transition-transform duration-100 ease-out flex items-center justify-center ';
   if (cursorText) {
-    ringClass += 'w-20 h-20 -ml-10 -mt-10 bg-slate-900/90 backdrop-blur-md border border-blue-500/80 text-[10px] font-mono font-bold text-white tracking-wider shadow-lg shadow-blue-500/20';
+    ringClass += 'w-20 h-20 -ml-10 -mt-10 bg-[#211A2B]/90 dark:bg-[#15111F]/90 backdrop-blur-md border border-[#7657E8]/80 text-[10px] font-mono font-bold text-white tracking-wider shadow-lg shadow-[#7657E8]/20';
   } else if (isPointer) {
-    ringClass += 'w-10 h-10 -ml-5 -mt-5 bg-blue-500/10 border-blue-500 scale-110';
+    ringClass += 'w-10 h-10 -ml-5 -mt-5 bg-[#7657E8]/10 dark:bg-[#BDA8FF]/15 border-[#7657E8] dark:border-[#BDA8FF] scale-110';
   } else {
     ringClass += 'w-7 h-7 -ml-3.5 -mt-3.5';
   }
@@ -67,7 +67,7 @@ export default function CustomCursor() {
       {/* Center Dot */}
       {!cursorText && (
         <div 
-          className="fixed top-0 left-0 w-1.5 h-1.5 -ml-[3px] -mt-[3px] rounded-full bg-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.6)]"
+          className="fixed top-0 left-0 w-1.5 h-1.5 -ml-[3px] -mt-[3px] rounded-full bg-[#7657E8] dark:bg-[#BDA8FF] shadow-[0_0_8px_rgba(118,87,232,0.6)]"
           style={{ transform: dotTransform }}
         />
       )}

@@ -66,14 +66,14 @@ export default function AchievementsSection({ onSelectProject }) {
 
               {/* Executive Summary Quote */}
               <blockquote className="p-4 rounded-xl bg-blue-50/60 border-l-4 border-blue-600 text-slate-700 text-sm italic mb-6">
-                &ldquo;Secured a Top 5 global position through competitive analytics problem-solving.&rdquo;
+                &ldquo;Secured a Global Top 5 position in the DataBuzz competition held in May 2026.&rdquo;
               </blockquote>
 
               {/* Bulleted Substantiation */}
               <div className="space-y-3 mb-8">
                 <div className="flex items-start gap-3 text-xs sm:text-sm text-slate-600">
                   <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
-                  <span>Participated in DataBuzz, a global analytics competition, and secured a Top 5 position worldwide.</span>
+                  <span>Secured a Global Top 5 position in the DataBuzz competition held in May 2026.</span>
                 </div>
                 <div className="flex items-start gap-3 text-xs sm:text-sm text-slate-600">
                   <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />

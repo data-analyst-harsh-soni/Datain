@@ -31,7 +31,7 @@ export const experience = {
     }
   ],
   leadershipRole: {
-    title: "Tech Director",
+    title: "Tech Lead",
     organization: "The Entrepreneurship Network (TEN)",
     focus: [
       "Guiding technology strategy and data architecture initiatives.",

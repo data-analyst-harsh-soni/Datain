@@ -5,7 +5,7 @@ export const resumeData = {
     "Data Analyst",
     "Analytics Engineer",
     "BI / Decision Intelligence",
-    "Technology Leader"
+    "Tech Lead"
   ],
   location: "Jabalpur, Madhya Pradesh, India",
   email: "harshnewa@gmail.com",

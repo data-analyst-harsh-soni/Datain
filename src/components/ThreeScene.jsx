@@ -41,7 +41,7 @@ export default function ThreeScene({ currentProject = null }) {
 
     const icosaGeometry = new THREE.IcosahedronGeometry(3.6, 2);
     const icosaMaterial = new THREE.MeshBasicMaterial({
-      color: 0x2563eb,
+      color: 0x7657e8,
       wireframe: true,
       transparent: true,
       opacity: 0.38
@@ -52,7 +52,7 @@ export default function ThreeScene({ currentProject = null }) {
     // Inner Glowing Core
     const innerGeo = new THREE.SphereGeometry(1.8, 16, 16);
     const innerMat = new THREE.MeshBasicMaterial({
-      color: 0x7c3aed,
+      color: 0xa76bce,
       wireframe: true,
       transparent: true,
       opacity: 0.48
@@ -63,7 +63,7 @@ export default function ThreeScene({ currentProject = null }) {
     // Inner Solid Core
     const solidGeo = new THREE.SphereGeometry(0.8, 16, 16);
     const solidMat = new THREE.MeshBasicMaterial({
-      color: 0x06b6d4,
+      color: 0xc7b6f7,
       transparent: true,
       opacity: 0.75
     });
@@ -79,7 +79,7 @@ export default function ThreeScene({ currentProject = null }) {
       const angle = (idx / nodeLabels.length) * Math.PI * 2;
       const nodeGeo = new THREE.SphereGeometry(0.28, 8, 8);
       const nodeMat = new THREE.MeshBasicMaterial({
-        color: idx % 2 === 0 ? 0x0284c7 : 0x7c3aed,
+        color: idx % 2 === 0 ? 0x7657e8 : 0x7bc7a6,
         transparent: true,
         opacity: 0.95
       });
@@ -98,10 +98,10 @@ export default function ThreeScene({ currentProject = null }) {
 
     // 3. Orbital Rings
     const ringMat1 = new THREE.MeshBasicMaterial({
-      color: 0x3b82f6,
+      color: 0x7657e8,
       wireframe: true,
       transparent: true,
-      opacity: 0.3
+      opacity: 0.32
     });
     const ringGeo1 = new THREE.TorusGeometry(6.2, 0.025, 8, 64);
     const ring1 = new THREE.Mesh(ringGeo1, ringMat1);
@@ -109,10 +109,10 @@ export default function ThreeScene({ currentProject = null }) {
     coreGroup.add(ring1);
 
     const ringMat2 = new THREE.MeshBasicMaterial({
-      color: 0x8b5cf6,
+      color: 0xa76bce,
       wireframe: true,
       transparent: true,
-      opacity: 0.28
+      opacity: 0.3
     });
     const ringGeo2 = new THREE.TorusGeometry(7.5, 0.025, 8, 64);
     const ring2 = new THREE.Mesh(ringGeo2, ringMat2);
@@ -126,9 +126,9 @@ export default function ThreeScene({ currentProject = null }) {
     const positions = new Float32Array(particleCount * 3);
     const colors = new Float32Array(particleCount * 3);
 
-    const colorBlue = new THREE.Color(0x2563eb);
-    const colorViolet = new THREE.Color(0x7c3aed);
-    const colorCyan = new THREE.Color(0x06b6d4);
+    const colorViolet = new THREE.Color(0x7657e8);
+    const colorPlum = new THREE.Color(0xa76bce);
+    const colorMint = new THREE.Color(0x7bc7a6);
 
     for (let i = 0; i < particleCount; i++) {
       const theta = Math.random() * Math.PI * 2;
@@ -139,7 +139,7 @@ export default function ThreeScene({ currentProject = null }) {
       positions[i * 3 + 1] = y;
       positions[i * 3 + 2] = Math.sin(theta) * radius;
 
-      const mixedColor = i % 3 === 0 ? colorCyan : i % 2 === 0 ? colorBlue : colorViolet;
+      const mixedColor = i % 3 === 0 ? colorMint : i % 2 === 0 ? colorViolet : colorPlum;
       colors[i * 3] = mixedColor.r;
       colors[i * 3 + 1] = mixedColor.g;
       colors[i * 3 + 2] = mixedColor.b;

@@ -24,7 +24,7 @@ export default function Hero({ onExploreWork }) {
         {/* Positioning Pill */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-blue-200/90 text-blue-700 text-xs font-mono tracking-widest uppercase mb-6 backdrop-blur-md shadow-[0_2px_12px_rgba(37,99,235,0.08)]">
           <span className="w-2 h-2 rounded-full bg-blue-600 animate-ping" />
-          <span>Analytics Engineer &bull; Data Analyst &bull; Technology Leader</span>
+          <span>Data Analyst &bull; Analytics Engineer &bull; Tech Lead</span>
         </div>
 
         {/* Identity & Main Statement */}

@@ -37,19 +37,19 @@ export default function WorkPage() {
         description="Comprehensive portfolio archive of 16 end-to-end data analytics, analytics engineering, and business intelligence case studies by Harsh Soni."
       />
 
-      <section className="pt-32 pb-24 bg-[#F8FAFC] min-h-screen">
+      <section className="pt-32 pb-24 bg-[#F7F4FA] dark:bg-[#0E0B15] min-h-screen transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-mono font-semibold uppercase tracking-wider mb-4 shadow-xs">
-              <Layers className="w-3.5 h-3.5 text-blue-600" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F1ECF6] dark:bg-[#1B1627] border border-[#C7B6F7] dark:border-[#7657E8]/40 text-[#7657E8] dark:text-[#BDA8FF] text-xs font-mono font-semibold uppercase tracking-wider mb-4 shadow-xs">
+              <Layers className="w-3.5 h-3.5 text-[#7657E8] dark:text-[#BDA8FF]" />
               <span>Complete Portfolio Archive</span>
             </div>
-            <h1 className="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight">
+            <h1 className="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-[#211A2B] dark:text-[#F5F0FA] tracking-tight">
               PROJECTS &amp; CASE STUDIES
             </h1>
-            <p className="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+            <p className="text-[#6F6678] dark:text-[#C9BED4] text-sm sm:text-base mt-3 leading-relaxed">
               Explore 16 production-grade analytics engineering pipelines, executive decision intelligence platforms, predictive models, and SQL architectures.
             </p>
           </div>
@@ -58,19 +58,19 @@ export default function WorkPage() {
           <div className="mb-12 space-y-4">
             {/* Search Input */}
             <div className="max-w-md mx-auto relative">
-              <Search className="w-4 h-4 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2" />
+              <Search className="w-4 h-4 text-[#93889D] dark:text-[#9E92AA] absolute left-4 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search by technology, domain, or keyword..."
-                className="w-full pl-11 pr-4 py-3 rounded-full bg-white border border-slate-200 text-slate-800 placeholder-slate-400 text-xs font-mono focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 shadow-sm transition-all"
+                className="w-full pl-11 pr-4 py-3 rounded-full bg-white dark:bg-[#15111F] border border-[#DED5E8] dark:border-[#342A43] text-[#211A2B] dark:text-[#F5F0FA] placeholder-[#93889D] dark:placeholder-[#9E92AA] text-xs font-mono focus:outline-none focus:border-[#7657E8] dark:focus:border-[#BDA8FF] focus:ring-2 focus:ring-[#7657E8]/20 shadow-sm transition-all"
               />
               {searchQuery && (
                 <button
                   type="button"
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-slate-600 font-mono"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-xs text-[#93889D] hover:text-[#211A2B] dark:text-[#9E92AA] dark:hover:text-[#F5F0FA] font-mono"
                 >
                   Clear
                 </button>
@@ -92,12 +92,12 @@ export default function WorkPage() {
                     onClick={() => setSelectedDomain(domain)}
                     className={`px-3.5 py-1.5 rounded-full text-xs font-mono transition-all duration-200 ${
                       isSelected
-                        ? 'bg-blue-600 text-white font-semibold shadow-sm'
-                        : 'bg-white border border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300'
+                        ? 'bg-[#7657E8] text-white font-semibold shadow-sm'
+                        : 'bg-white dark:bg-[#15111F] border border-[#DED5E8] dark:border-[#342A43] text-[#6F6678] dark:text-[#C9BED4] hover:text-[#211A2B] dark:hover:text-[#F5F0FA] hover:border-[#7657E8]/50'
                     }`}
                   >
                     <span>{domain}</span>
-                    <span className={`ml-1.5 text-[10px] opacity-75 ${isSelected ? 'text-blue-100' : 'text-slate-400'}`}>
+                    <span className={`ml-1.5 text-[10px] opacity-75 ${isSelected ? 'text-[#EEE6FF]' : 'text-[#93889D] dark:text-[#9E92AA]'}`}>
                       ({count})
                     </span>
                   </button>
@@ -114,12 +114,12 @@ export default function WorkPage() {
               ))}
             </div>
           ) : (
-            <div className="text-center py-20 bg-white rounded-3xl border border-slate-200 p-8 max-w-md mx-auto">
-              <Search className="w-10 h-10 text-slate-300 mx-auto mb-3" />
-              <h3 className="font-display font-bold text-slate-800 text-base mb-1">
+            <div className="text-center py-20 bg-white dark:bg-[#15111F] rounded-3xl border border-[#DED5E8] dark:border-[#342A43] p-8 max-w-md mx-auto">
+              <Search className="w-10 h-10 text-[#93889D] dark:text-[#9E92AA] mx-auto mb-3" />
+              <h3 className="font-display font-bold text-[#211A2B] dark:text-[#F5F0FA] text-base mb-1">
                 No matching projects found
               </h3>
-              <p className="text-slate-500 text-xs font-mono mb-4">
+              <p className="text-[#6F6678] dark:text-[#9E92AA] text-xs font-mono mb-4">
                 Try refining your search keyword or clearing the domain filter.
               </p>
               <button
@@ -128,7 +128,7 @@ export default function WorkPage() {
                   setSelectedDomain('All');
                   setSearchQuery('');
                 }}
-                className="px-4 py-2 rounded-full bg-blue-600 text-white text-xs font-semibold"
+                className="px-4 py-2 rounded-full bg-[#7657E8] hover:bg-[#6746db] text-white text-xs font-semibold"
               >
                 Reset Filters
               </button>

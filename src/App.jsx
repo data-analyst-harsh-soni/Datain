@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
@@ -19,7 +20,8 @@ import ContactPage from './pages/ContactPage';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#F8FAFC] text-slate-900 selection:bg-blue-500/20 selection:text-blue-700 relative flex flex-col justify-between">
+    <ThemeProvider>
+      <div className="min-h-screen bg-[#F7F4FA] dark:bg-[#0E0B15] text-[#211A2B] dark:text-[#F5F0FA] selection:bg-[#7657E8]/20 selection:text-[#7657E8] relative flex flex-col justify-between transition-colors duration-300">
       {/* Scroll restoration to (0,0) on page transition */}
       <ScrollToTop />
 
@@ -53,5 +55,6 @@ export default function App() {
       {/* Portfolio Footer */}
       <Footer />
     </div>
+    </ThemeProvider>
   );
 }
