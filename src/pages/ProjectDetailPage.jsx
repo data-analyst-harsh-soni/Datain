@@ -352,25 +352,25 @@ export default function ProjectDetailPage() {
           )}
 
           {/* ================================================== */}
-          {/* 6. VERTICAL CASE-STUDY GALLERY — NO SLIDESHOW      */}
+          {/* 6. AUTO-SLIDE CASE-STUDY PRESENTATION              */}
           {/* ================================================== */}
           {project.assets && project.assets.length > 0 && (
-            <section className="mb-16">
-              <div className="flex items-center justify-between mb-8 pb-4 border-b border-[#DED5E8] dark:border-[#342A43]">
+            <section className="mb-8 sm:mb-16">
+              <div className="flex items-center justify-between mb-4 sm:mb-8 pb-3 sm:pb-4 border-b border-[#DED5E8] dark:border-[#342A43]">
                 <div>
-                  <span className="text-xs font-mono font-bold text-[#7657E8] dark:text-[#BDA8FF] uppercase tracking-widest block">
+                  <span className="text-[10px] sm:text-xs font-mono font-bold text-[#7657E8] dark:text-[#BDA8FF] uppercase tracking-widest block">
                     Case Study Walkthrough
                   </span>
-                  <h2 className="font-display font-black text-2xl sm:text-3xl text-[#211A2B] dark:text-[#F5F0FA] mt-1">
+                  <h2 className="font-display font-black text-xl sm:text-3xl text-[#211A2B] dark:text-[#F5F0FA] mt-0.5 sm:mt-1">
                     Visual Analytics Gallery ({project.assets.length} Views)
                   </h2>
-                  <p className="text-xs sm:text-sm text-[#6F6678] dark:text-[#9E92AA] font-mono mt-1">
-                    Scroll through the project workflow sequentially &bull; Click any view to expand
+                  <p className="text-[11px] sm:text-sm text-[#6F6678] dark:text-[#9E92AA] font-mono mt-0.5 sm:mt-1">
+                    Interactive case study presentation &bull; Auto-advances every 3s &bull; Click any slide to expand
                   </p>
                 </div>
               </div>
 
-              {/* Vertical Case-Study Gallery Component */}
+              {/* Auto-Slide Presentation Gallery Component */}
               <ProjectGallery
                 assets={project.assets}
                 hasThemeToggle={project.hasThemeToggle}
